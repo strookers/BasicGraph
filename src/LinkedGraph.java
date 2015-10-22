@@ -3,8 +3,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class LinkedGraph implements IFBasicGraph {
-	ArrayList<LinkedList<Vertex>> vertices = new ArrayList<>();
 	LinkedList<Vertex> vertexSet = new LinkedList<>();
+	ArrayList<LinkedList<Vertex>> vertices = new ArrayList<>();
 
 	public LinkedGraph() {
 		// TODO Auto-generated constructor stub
@@ -19,7 +19,10 @@ public class LinkedGraph implements IFBasicGraph {
 	@Override
 	public void removeVertex(Vertex vertex) {
 		// TODO Auto-generated method stub
-		
+		for(Vertex v : vertices)
+		{
+			vertices.equals(vertex);
+		}
 	}
 
 	@Override
