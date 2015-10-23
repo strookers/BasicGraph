@@ -4,7 +4,7 @@ import java.util.*;
 public class Main {
 
 	public static void main(String[] args) {
-        IFBasicGraph crocAir = new LinkedGraph(10);
+        IFBasicGraph crocAir = new LinkedGraph();
         LinkedList<Vertex> l;
         // Constructing CrocAirlines...
           

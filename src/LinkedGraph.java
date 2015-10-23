@@ -4,7 +4,7 @@ import java.util.List;
 
 public class LinkedGraph implements IFBasicGraph {
 	LinkedList<Vertex> vertexSet = new LinkedList<>();
-	ArrayList<LinkedList<Vertex>> vertices = new ArrayList<>();
+	ArrayList<Vertex> vertices = new ArrayList<>();
 
 	public LinkedGraph() {
 		// TODO Auto-generated constructor stub
@@ -13,16 +13,12 @@ public class LinkedGraph implements IFBasicGraph {
 	@Override
 	public void addVertex(Vertex vertex) {
 		// TODO Auto-generated method stub
-		vertices.add(vertexSet.add(1, vertex));
+		vertices.add(vertex);
 	}
 
 	@Override
 	public void removeVertex(Vertex vertex) {
 		// TODO Auto-generated method stub
-		for(Vertex v : vertices)
-		{
-			vertices.equals(vertex);
-		}
 	}
 
 	@Override
@@ -43,4 +39,22 @@ public class LinkedGraph implements IFBasicGraph {
 		return null;
 	}
 
+	public int getNoOfVertices()
+	{
+		return vertices.size();
+	}
+	
+	public boolean containsVertex(Vertex v)
+	{
+		boolean status = false;
+		for(int i = 0; i < vertices.size(); i++)
+		{
+			if(vertices.get(i).equals(v))
+			{
+				status = true;
+			}
+		}
+		return status;
+		
+	}
 }

@@ -15,5 +15,8 @@ public interface IFBasicGraph {
    boolean hasEdge(Vertex v1, Vertex v2);
    //get a list of neighbors to vertex
    List<Vertex> getAdjacenciesTo(Vertex vertex);
-   
+   //print number of vertices
+   int getNoOfVertices();
+   //see if a vertex exist
+   boolean containsVertex(Vertex v);
  }
