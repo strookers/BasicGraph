@@ -4,12 +4,14 @@ import java.util.*;
 public class Main {
 
 	public static void main(String[] args) {
-        IFBasicGraph crocAir = new LinkedGraph();
+        IFBasicGraph crocAir = new LinkedGraph(10);
         LinkedList<Vertex> l;
         // Constructing CrocAirlines...
           
         System.out.println("IsEmpty() (should be true): " + crocAir.isEmpty());
     
+        Vertex copenhagen = new Vertex("Copenhagen");
+        
         Vertex perth = new Vertex("Perth");
         Vertex blackStump = new Vertex("Black Stump");
         Vertex darwin = new Vertex("Darwin");
@@ -21,6 +23,8 @@ public class Main {
         Vertex hobart = new Vertex("Hobart");
         Vertex aalborg = new Vertex("Aalborg");
 
+        crocAir.addVertex(copenhagen);
+        
         crocAir.addVertex(perth);
         crocAir.addVertex(blackStump);
         crocAir.addVertex(darwin);
@@ -30,6 +34,8 @@ public class Main {
         crocAir.addVertex(adelaide);
         crocAir.addVertex(melbourne);
         crocAir.addVertex(hobart);
+        
+        crocAir.removeVertex(copenhagen);
     
 //        crocAir.addVertex(aalborg);
 

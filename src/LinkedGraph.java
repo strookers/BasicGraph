@@ -1,13 +1,29 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
+import java.util.TreeMap;
 
 public class LinkedGraph implements IFBasicGraph {
-	LinkedList<Vertex> vertexSet = new LinkedList<>();
-	ArrayList<Vertex> vertices = new ArrayList<>();
 
-	public LinkedGraph() {
-		// TODO Auto-generated constructor stub
+	private List<Vertex> vertices;
+	private int noVer;
+	private int noOfEdges;
+	private List<LinkedList<Vertex>> adjList;
+
+	public LinkedGraph(int noVer) {
+		init(noVer);
+		noOfEdges = 0;
+
+	}
+
+	private void init(int noVer) {
+		vertices = new ArrayList<Vertex>(noVer);
+		this.noVer = noVer; // - 1;
+		adjList = new ArrayList<LinkedList<Vertex>>(noVer);
+		for (LinkedList<Vertex> l : adjList)
+			l = new LinkedList<Vertex>();
+
 	}
 
 	@Override
@@ -19,12 +35,23 @@ public class LinkedGraph implements IFBasicGraph {
 	@Override
 	public void removeVertex(Vertex vertex) {
 		// TODO Auto-generated method stub
+		for (int i = 0; i < vertices.size(); i++) {
+			if (vertices.get(i).equals(vertex)) {
+				vertices.remove(i);
+				System.out.println(vertices.get(i).getName()+ i + " has been removed");
+			}
+		}
 	}
 
 	@Override
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
-		return false;
+		if(vertices.isEmpty())
+		{
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	@Override
@@ -39,22 +66,21 @@ public class LinkedGraph implements IFBasicGraph {
 		return null;
 	}
 
-	public int getNoOfVertices()
-	{
+	@Override
+	public int getNoOfVertices() {
+		// TODO Auto-generated method stub
 		return vertices.size();
 	}
-	
-	public boolean containsVertex(Vertex v)
-	{
+
+	@Override
+	public boolean containsVertex(Vertex v) {
+		// TODO Auto-generated method stub
 		boolean status = false;
-		for(int i = 0; i < vertices.size(); i++)
-		{
-			if(vertices.get(i).equals(v))
-			{
+		for (int i = 0; i < vertices.size(); i++) {
+			if (vertices.get(i).equals(v)) {
 				status = true;
 			}
 		}
 		return status;
-		
 	}
 }
