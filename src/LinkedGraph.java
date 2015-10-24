@@ -37,8 +37,8 @@ public class LinkedGraph implements IFBasicGraph {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < vertices.size(); i++) {
 			if (vertices.get(i).equals(vertex)) {
+				System.out.println(vertices.get(i).getName() + " has been removed");
 				vertices.remove(i);
-				System.out.println(vertices.get(i).getName()+ i + " has been removed");
 			}
 		}
 	}
