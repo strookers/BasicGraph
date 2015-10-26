@@ -46,12 +46,7 @@ public class LinkedGraph implements IFBasicGraph {
 	@Override
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
-		if(vertices.isEmpty())
-		{
-			return true;
-		}else{
-			return false;
-		}
+		return (vertices.isEmpty());
 	}
 
 	@Override
@@ -60,6 +55,10 @@ public class LinkedGraph implements IFBasicGraph {
 		return false;
 	}
 
+	public void addEdge(Vertex v1, Vertex v2)
+	{
+		
+	}
 	@Override
 	public List<Vertex> getAdjacenciesTo(Vertex vertex) {
 		// TODO Auto-generated method stub

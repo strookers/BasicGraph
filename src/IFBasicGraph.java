@@ -13,6 +13,8 @@ public interface IFBasicGraph {
    boolean isEmpty();
    //checks if vertex have edge
    boolean hasEdge(Vertex v1, Vertex v2);
+   //adds an edge
+   public void addEdge(Vertex v1, Vertex v2);
    //get a list of neighbors to vertex
    List<Vertex> getAdjacenciesTo(Vertex vertex);
    //print number of vertices
