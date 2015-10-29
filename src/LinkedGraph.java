@@ -57,7 +57,7 @@ public class LinkedGraph implements IFBasicGraph {
 
 	public void addEdge(Vertex v1, Vertex v2)
 	{
-		adjList.add(new LinkedList<Vertex>().add(v1));
+		adjList.get(1).add(v1);
 	}
 	@Override
 	public List<Vertex> getAdjacenciesTo(Vertex vertex) {
