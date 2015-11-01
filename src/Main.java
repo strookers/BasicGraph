@@ -50,11 +50,11 @@ public class Main {
         System.out.println(crocAir.containsVertex(sydney));
         System.out.println(crocAir.containsVertex(aalborg));
 //
-//        crocAir.addEdge(perth, blackStump);
-//        crocAir.addEdge(blackStump, darwin);
-//        crocAir.addEdge(darwin, canberra);
-//        crocAir.addEdge(canberra, brisbane);
-//        crocAir.addEdge(brisbane, sydney);
+        crocAir.addEdge(perth, blackStump);
+        crocAir.addEdge(blackStump, darwin);
+        crocAir.addEdge(darwin, canberra);
+        crocAir.addEdge(canberra, brisbane);
+        crocAir.addEdge(brisbane, sydney);
 //        crocAir.addEdge(sydney, canberra);
 //        crocAir.addEdge(canberra, sydney);
 //        crocAir.addEdge(sydney, melbourne);
