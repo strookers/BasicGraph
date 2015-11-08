@@ -59,12 +59,12 @@ public class LinkedGraph implements IFBasicGraph {
 	{
 		for(int i = 0; i < vertices.size(); i++)
 		{
-			if(vertices.get(i).getName() == v1.getName() )
+			if(vertices.get(i).equals(v1))
 			{
 				//adjList.get(i).add(v2);
 				System.out.println("Edge tilføjet: " + v1.getName() + " -> " + v2.getName());
 			}
-			System.out.println(adjList.get(1).get(1).getName());
+			//System.out.println(adjList.get(1).get(1).getName());
 		}
 	}
 	@Override
