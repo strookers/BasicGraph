@@ -57,4 +57,10 @@ public class MyLinkedGraph implements IFBasicGraph {
 		return status;
 		
 	}
+
+	@Override
+	public void addEdge(Vertex v1, Vertex v2) {
+		// TODO Auto-generated method stub
+		
+	}
 }
